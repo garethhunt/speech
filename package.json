@@ -1,0 +1,14 @@
+{
+  "name": "speech-api-demo",
+  "version": "0.0.1",
+  "description": "Demo app for exploring the browser speech API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Gareth Hunt",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.11.1"
+  }
+}

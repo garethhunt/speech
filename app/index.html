@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Browser Speech API Demo</title>
+    <link type="text/css" href="css/speechdemo.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <section id="nospeechapi">Your browser does not support the web speech API</section>
+    <section>
+      <section id="controls">
+        <textarea id="words" placeholder="Enter text to be spoken"></textarea>
+        <button id="speak">Speak</button>
+      </section>
+      <section id="configure">
+        <section>
+          <label for="voice">Select voice:</label>
+          <select id="voice" placeholder="Select Voice"></select>
+        </section>
+        <section>
+          <label for="includeExternal">Include external voices?</label>
+          <input id="includeExternal" type="checkbox">
+        </section>
+        <section>
+          <label for="speechRate">Speech rate:</label>
+          <input id="speechRate" type="range" min="0.5", max="2.0" step="0.1" default="1.0">
+        </section>
+      </section>
+    </section>
+    <script type="application/javascript" src="src/speechdemo.js"></script>
+  </body>
+</html>

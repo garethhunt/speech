@@ -1,0 +1,47 @@
+/* Make sure border-box is used */
+body {
+  box-sizing: border-box;
+  /* TODO: Pick a better font */
+  font-family: Verdana;
+  font-size: 1.5em;
+  margin: 40px 200px 0;
+}
+
+@media (max-width: 320px) {
+  body {
+    margin: 40px 5px 0;
+  }
+}
+
+body > section {
+  display: none;
+}
+
+section#nospeechapi {
+  display: block;
+}
+
+body.speechapisupported > section {
+  display: block
+}
+
+body.speechapisupported > section#nospeechapi {
+  display: none;
+}
+
+button, textarea {
+  font-size: 1.5em;
+}
+
+button {
+  border-radius: 15px;
+}
+
+textarea {
+  height: 7em;
+  width: 100%;
+}
+
+section#controls {
+  text-align: right;
+}
