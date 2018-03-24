@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "Demo app for exploring the browser speech API",
   "main": "index.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "author": "Gareth Hunt",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.11.1"
+    "browser-sync": "^2.23.6"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --files \"*.html\" \"*.js\""
   }
 }
