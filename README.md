@@ -2,18 +2,12 @@
 
 Demonstration of the [SpeechSynthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis). Not all browsers support this API, see [browser compatibility tables](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis#Browser_compatibility).
 
-## To Install
+## Install and run development server
 
-Optionally install node modules for a development server:
+Optionally, install [browser-sync](https://browsersync.io/) as a development server:
 
-    $ npm install
-
-
-## Run development server
-
-Browser-sync is used for the development server:
-
-    $ npm start
+    $ yarn install
+    $ yarn start
 
 ## TO-DO:
 
