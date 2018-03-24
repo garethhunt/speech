@@ -2,31 +2,74 @@
 <html>
   <head>
     <title>Browser Speech API Demo</title>
-    <link type="text/css" href="speechdemo.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@6.5.0/picnic.min.css">
+    <style>
+      .hero {
+        background-color: #000;
+        color: #fff;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+      }
+      .ghi {
+        mask: url('https://cdn.jsdelivr.net/npm/simple-icons@1.3.7/icons/github.svg') no-repeat;
+        -webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@1.3.7/icons/github.svg') no-repeat;
+        background-color: white;
+        display: block;
+        height: 40px;
+        margin: 5px;
+        position: absolute;
+        right: 0;
+        width: 40px;
+      }
+      #nospeechapi {
+        display: none;
+      }
+      #speechcontrols {
+        margin: 3px;
+      }
+      #configure {
+        margin-top: 10px
+      }
+      .vcenter {
+        position: relative;
+        transform: translateY(50%)
+      }
+    </style>
   </head>
   <body>
+    <div class="hero">
+        <a class="ghi" href="https://github.com/garethhunt/speech" target="_blank" title="Source code on Github"></a>
+        <h1>Speech</h1>
+        <p>A simple text-to-speech app to demonstrate the browser <a href ="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API" target="_blank">Web Speech API</a>.</p>
+    </div>
     <section id="nospeechapi">Your browser does not support the web speech API</section>
-    <section>
-      <section id="controls">
+    <section id="speechcontrols">
+      <div id="controls">
         <textarea id="words" placeholder="Enter text to be spoken"></textarea>
         <button id="speak">Speak</button>
-      </section>
-      <section id="configure">
-        <section>
-          <label for="voice">Select voice:</label>
-          <select id="voice" placeholder="Select Voice"></select>
-        </section>
-        <section>
-          <label for="includeExternal">Include external voices?</label>
-          <input id="includeExternal" type="checkbox">
-        </section>
-        <section>
-          <label for="speechRate">Speech rate:</label>
-          <input id="speechRate" type="range" min="0.5", max="2.0" step="0.1" default="1.0">
-        </section>
-      </section>
-    </section>
+      </div>
+      <div id="configure">
+        <h3>Configuration</h3>
+        <div class="controls flex one two-500">
+          <div class="half-500">
+            <label for="voice">Select voice:</label>
+            <select id="voice" placeholder="Select Voice"></select>
+          </div>
+          <div class="half-500 vcenter">
+            <label for="includeExternal">
+              <input id="includeExternal" type="checkbox">
+              <span class="checkable">Include external voices?</span>
+            </label>
+          </div>
+          <div class="one half-500">
+            <label for="speechRate">Speech rate:</label>
+            <input id="speechRate" type="range" min="0.5", max="2.0" step="0.1" default="1.0">
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="application/javascript" src="speechdemo.js"></script>
   </body>
 </html>
